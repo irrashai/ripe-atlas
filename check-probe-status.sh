@@ -5,15 +5,12 @@
 #path="~/WORKSPACE/ripe-atlas/"
 probelist="probes.txt"
 counter=0
+datenow=`date +%Y-%m-%d`
 
 # Working dir
 #cd $path
 
-
-datenow=`date +%Y-%m-%d`
-
-echo $datenow
-
+# Probe ID should be the first column
 for i in `cat $probelist | awk -F"," '{print $1}' `;
 do
 	#echo -n "Checking $i ..."
